@@ -31,7 +31,6 @@ steps:
     settings:
       remote: git@github.com:storezhang/media.git
       folder: $${GO}
-      commit: ${DRONE_COMMIT_MESSAGE}
       tag: v$${VERSION}
       ssh_key:
         from_secret: ssh_key_github
@@ -42,7 +41,7 @@ steps:
       - name: maven
         path: /var/lib/maven
     settings:
-      folder: $${JAVA}
+      source: $${JAVA}
       version: $${VERSION}
       username:
         from_secret: username_nexus
