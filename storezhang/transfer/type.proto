@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package storezhang.media;
+
+
+option java_multiple_files = true;
+option java_package = "tech.storezhang.media";
+
+option go_package = "github.com/storezhang/media;media";
+
+
+// 类型
+enum Type {
+  // 未知，不要使用
+  TYPE_UNSPECIFIED = 0;
+
+  // 视频
+  VIDEO = 1;
+  // 音频
+  AUDIO = 2;
+}

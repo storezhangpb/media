@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tech.storezhang</groupId>
+    <artifactId>media</artifactId>
+    <version>0.0.1</version>
+
+    <name>Media</name>
+    <url>https://media.storezhang.tech</url>
+    <description>
+        媒体资源Protobuf协议Java版，可以提供基础的文件传输操作，方便在开发中使用媒体相关信息，包括：
+        1、格式
+        2、分辨率
+        3、类型
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.19.4</version>
+        </dependency>
+    </dependencies>
+
+    <developers>
+        <developer>
+            <id>storezhang</id>
+            <name>张宗良</name>
+            <email>storezhang@gmail.com</email>
+            <url>https://storezhang.tech</url>
+            <roles>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+            <organization>Storezhang</organization>
+            <organizationUrl>https://github.com/storezhang</organizationUrl>
+            <properties>
+                <qq>160290688</qq>
+                <wechat>storezhang</wechat>
+            </properties>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/storezhangpb/media</connection>
+        <developerConnection>scm:git:https://github.com/storezhang</developerConnection>
+        <url>https://github.com/storezhangpb/media</url>
+    </scm>
+</project>

@@ -1,0 +1,56 @@
+kind: pipeline
+type: docker
+name: Media
+
+
+clone:
+  disable: true
+
+
+environment:
+  VERSION: 0.0.1
+  GO: lang/go
+  JAVA: lang/java
+
+
+steps:
+  - name: 代码
+    image: dronestock/git
+
+  - name: 编译
+    image: dronestock/protobuf
+    settings:
+      outputs:
+        go: $${GO}
+        java: $${JAVA}
+      opt:
+        go: module=github.com/storezhang/media
+
+  - name: Golang
+    image: dronestock/git
+    settings:
+      remote: git@github.com:storezhang/media.git
+      folder: $${GO}
+      commit: ${DRONE_COMMIT_MESSAGE}
+      tag: v$${VERSION}
+      ssh_key:
+        from_secret: ssh_key_github
+
+  - name: Java
+    image: dronestock/maven
+    volumes:
+      - name: maven
+        path: /var/lib/maven
+    settings:
+      folder: $${JAVA}
+      version: $${VERSION}
+      username:
+        from_secret: username_nexus
+      password:
+        from_secret: password_nexus
+
+
+volumes:
+  - name: maven
+    host:
+      path: /var/lib/cache/maven

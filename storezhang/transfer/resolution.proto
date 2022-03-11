@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package storezhang.media;
+
+
+option java_multiple_files = true;
+option java_package = "tech.storezhang.media";
+
+option go_package = "github.com/storezhang/media;media";
+
+
+// 分辨率
+enum Resolution {
+  // 未知，不要使用
+  RESOLUTION_UNSPECIFIED = 0;
+
+  // 最低档，不要使用
+  P360 = 1;
+  // 标清
+  P480 = 2 ;
+  // 高清
+  P720 = 3 ;
+  // 超高清
+  P1080 = 4 ;
+  // 2K
+  K2 = 5 ;
+  // 4K
+  K4 = 6 ;
+  // 8K
+  K8 = 7;
+
+  // 音频
+  VOICE = 14 ;
+  // 原始分辨率
+  ORIGINAL = 15 ;
+}
