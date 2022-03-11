@@ -12,7 +12,7 @@
     <name>Media</name>
     <url>https://media.storezhang.tech</url>
     <description>
-        媒体资源Protobuf协议Java版，可以提供基础的文件传输操作，方便在开发中使用媒体相关信息，包括：
+        媒体资源Protobuf协议Java版，可以提供基础的媒体资源定义，方便在开发中使用媒体相关信息，包括：
         1、格式
         2、分辨率
         3、类型
