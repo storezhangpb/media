@@ -33,4 +33,8 @@ enum Resolution {
   VOICE = 14 ;
   // 原始分辨率
   ORIGINAL = 15 ;
+
+  // 自定义分辨率
+  // 尽量不使用自定义分辨率，也许相应的库并没有实现自定义分辨率功能
+  CUSTOMIZE = 127;
 }
