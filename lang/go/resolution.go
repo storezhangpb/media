@@ -1,5 +1,30 @@
 package media
 
+func (r Resolution) Name() (name string) {
+    switch r {
+    case Resolution_RESOLUTION_UNSPECIFIED:
+        name = `unknown`
+    case Resolution_P360:
+        name = `360p`
+    case Resolution_P480:
+        name = `480p`
+    case Resolution_P720:
+        name = `720p`
+    case Resolution_P1080:
+        name = `1080p`
+    case Resolution_K2:
+        name = `2k`
+    case Resolution_K4:
+        name = `4k`
+    case Resolution_K8:
+        name = `8k`
+    case Resolution_ORIGINAL:
+        name = `original`
+    }
+
+    return
+}
+
 func (r Resolution) Width() (width int) {
     switch r {
     case Resolution_RESOLUTION_UNSPECIFIED:
@@ -46,5 +71,6 @@ func (r Resolution) Height() (height int) {
     case Resolution_ORIGINAL:
         height = 0
     }
+
     return
 }

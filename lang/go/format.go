@@ -1,15 +1,15 @@
 package media
 
-func (f Format) String() (str string) {
+func (f Format) Name() (name string) {
     switch f {
     case Format_MP3:
-        str = `mp3`
+        name = `mp3`
     case Format_MP4:
-        str = `mp4`
+        name = `mp4`
     case Format_FORMAT_UNSPECIFIED:
-        str = `unknown`
+        name = `unknown`
     default:
-        str = `error`
+        name = `error`
     }
 
     return
