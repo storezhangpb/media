@@ -14,7 +14,7 @@ enum Resolution {
   // 未知，不要使用
   RESOLUTION_UNSPECIFIED = 0;
 
-  // 最低档，不要使用
+  // 最低档，尽量不要使用
   P360 = 1;
   // 标清
   P480 = 2 ;
@@ -29,8 +29,6 @@ enum Resolution {
   // 8K
   K8 = 7;
 
-  // 音频
-  VOICE = 14 ;
   // 原始分辨率
   ORIGINAL = 15 ;
 
